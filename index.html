@@ -55,6 +55,103 @@
 				</div>
 			</div>
 		</section>
+		<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "7d090035-6247-4203-844d-b89903a6719e",
+        apiHost: "https://flowise.infostride.us",
+
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#00738B',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/tabler/tabler-icons/refs/heads/main/icons/outline/brand-line.svg',
+                autoWindowOpen: {
+                    autoOpen: false,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: false,
+                tooltipMessage: 'Hi There 👋!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Equalis Group Assistant',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/tabler/tabler-icons/refs/heads/main/icons/outline/brand-line.svg',
+                welcomeMessage: 'Hi there! How can I help you?',
+                errorMessage: 'Sorry, it seems like I am facing some issues. Let\'s connect after some time.',
+                backgroundColor: '#ffffff',
+                backgroundImage: 'enter image path or link',
+                height: 550,
+                width: 500,
+                fontSize: 16,
+                starterPrompts: [
+                    "What is Equalis Group?",
+                    "How can I book a demo?",
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/tabler/tabler-icons/refs/heads/main/icons/outline/mood-smile-beam.svg'
+                },
+                userMessage: {
+                    backgroundColor: '#00738B',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/tabler/tabler-icons/refs/heads/main/icons/outline/user-square-rounded.svg'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#00738B',
+                    maxChars: 5000,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 5000 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: '',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: ''
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'StrideAI',
+                    companyLink: 'https://infostride.com'
+                }
+            }
+        }
+    })
+</script>
 	</main>
 </body>
 </html>
