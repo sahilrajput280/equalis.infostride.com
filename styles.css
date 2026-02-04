@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Philosopher:wght@400;700&display=swap");
+
+:root {
+	--teal: #00738b;
+	--dark: #092f34;
+	--accent: #2a8e3e;
+	--text: #1e1e1e;
+	--muted: #4c4c4c;
+	--bg: #fdfdfd;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Montserrat", Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+.top-nav {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #ffffff;
+	border-bottom: 1px solid #dfe4e7;
+	margin-bottom: 0;
+}
+
+.nav-inner {
+	max-width: 1380px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	padding: 1rem 2.75rem;
+	min-height: 96px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+}
+
+.brand img {
+	height: 50px;
+	width: auto;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex: 1;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 20px;
+	color: #111;
+}
+
+.nav-links .caret {
+	margin-left: 6px;
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+.nav-links a:hover {
+	color: var(--teal);
+}
+
+
+.nav-actions {
+	display: flex;
+	align-items: stretch;
+	gap: 0.75rem;
+}
+
+.join-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	background: #00a9e0;
+	color: #ffffff;
+	padding: 0 2.0rem;
+	height: 96px;
+	border-radius: 0;
+	font-weight: 600;
+	font-size: 20px;
+	text-decoration: none;
+	transition: background 0.25s ease;
+}
+
+.join-btn:hover {
+	background: #f26522;
+}
+
+.join-icon {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: 2px solid #000000;
+	position: relative;
+}
+
+.join-icon::before,
+.join-icon::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #00a9e0;
+}
+
+.join-icon::before {
+	width: 10px;
+	height: 10px;
+	top: 4px;
+	border-radius: 50%;
+}
+
+.join-icon::after {
+	width: 16px;
+	height: 8px;
+	bottom: 4px;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.icon-btn {
+	background: transparent;
+	border: none;
+	padding: 0 0.35rem;
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+}
+
+.search-icon {
+	width: 22px;
+	height: 22px;
+	border: 2px solid #111;
+	border-radius: 50%;
+	position: relative;
+}
+
+.search-icon::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #111;
+	bottom: -6px;
+	right: -6px;
+	transform: rotate(45deg);
+}
+
+.banner {
+	width: 100%;
+	background: #eef6fa;
+	border-top: 30px solid var(--teal);
+	border-bottom: 30px solid var(--teal);
+}
+
+.banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1.05fr 0.95fr;
+	gap: 2.5rem;
+	align-items: center;
+	padding: 3.5rem 2.5rem 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hero-text h1,
+.hero-text h2 {
+	font-family: "Philosopher", "Montserrat", Arial, sans-serif;
+}
+
+.hero-text h1 {
+	margin: 0 0 1rem;
+	font-size: 2.5rem;
+	color: var(--teal);
+	letter-spacing: -0.02em;
+	line-height: 1.15;
+}
+
+.hero-sub {
+	margin: 0 0 1rem;
+	font-size: 1.75rem;
+	color: var(--accent);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.hero-body {
+	margin: 0 0 1.5rem;
+	color: var(--muted);
+	line-height: 1.6;
+	font-size: 1.05rem;
+}
+
+.hero-body a {
+	color: var(--teal);
+	font-weight: 600;
+}
+
+.cta {
+	display: inline-block;
+	background: var(--teal);
+	color: #ffffff;
+	padding: 0.75rem 1.6rem;
+	border-radius: 6px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.cta:hover {
+	background: #005b6c;
+}
+
+.hero-media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.video-frame {
+	position: relative;
+	width: 100%;
+	max-width: 540px;
+	aspect-ratio: 16 / 9;
+	border-radius: 10px;
+	overflow: hidden;
+	background: #000;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.video-embed {
+	position: absolute;
+	inset: 0;
+}
+
+.video-embed iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+@media (max-width: 1100px) {
+	.top-nav {
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.nav-links {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.hero {
+		grid-template-columns: 1fr;
+		padding: 2.5rem 1.5rem 3rem;
+	}
+
+	.hero-media {
+		order: -1;
+	}
+}
+
+@media (max-width: 640px) {
+	.top-nav {
+		padding: 0.75rem 1rem;
+	}
+
+	.nav-links {
+		font-size: 0.95rem;
+	}
+
+	.hero-text h1 {
+		font-size: 2rem;
+	}
+
+	.hero-sub {
+		font-size: 1.1rem;
+	}
+}
